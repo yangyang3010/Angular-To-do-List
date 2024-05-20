@@ -1,0 +1,121 @@
+/* You can add global styles to this file, and also import other style files */
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  background-color: var(--clr-background);
+  color: var(--clr-text);
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  list-style-type: none;
+
+  --clr-page-background: #e5ffd1;
+  --clr-primary: #79c342;
+  --clr-secondary: #ca99df;
+  --clr-accent: #d2708d;
+  --clr-background: #f8fcf5;
+  --clr-text: #101d09;
+}
+
+body, html {
+  background-color:var(--clr-page-background);
+}
+
+button {
+  height: fit-content;
+  width: fit-content;
+  line-height: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+svg {
+  width: 35px;
+  height: 35px;
+  margin: 0;
+}
+
+button:active {
+  scale: 1.2;
+}
+
+h1,
+h2,
+h3 {
+  background-color: transparent;
+}
+
+.grid-1-1-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px
+}
+
+.grid-2-3-columns {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 20px;
+}
+
+.grid-3-2-columns {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 20px;
+}
+
+.grid-1-2-columns {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px
+}
+
+.container {
+  width: 1200px;
+  height: 700px;
+  margin: 40px auto;
+  padding: 30px;
+
+  border: 5px solid black;
+  border-radius: 2rem;
+  box-shadow: 20px 20px var(--clr-primary);
+}
+
+.gradient-text {
+  background-image: linear-gradient(to right, var(--clr-primary), var(--clr-accent));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.gradient-background {
+  background-image: linear-gradient(to right, var(--clr-secondary), var(--clr-accent));
+}
+
+.information-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+input[type="text"], input[type="password"] {
+  width: 100%;
+  font-size: 1.5rem;
+  border-radius: 100vh;
+  padding-inline: 1em;
+  border: 3px solid var(--clr-text);
+  outline: none;
+  transition: 300ms;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+  border: 3px solid var(--clr-secondary);
+}
+

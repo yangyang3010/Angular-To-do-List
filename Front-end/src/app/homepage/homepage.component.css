@@ -1,0 +1,179 @@
+.lists, .tasks-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  height: 100%;
+
+  border: 3px solid black;
+  border-radius: 1rem;
+  box-shadow: 10px 10px var(--clr-secondary);
+}
+
+.title-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.lists .title {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.lists .title>span {
+  font-weight: 900;
+}
+
+.todos, .tasks {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  max-height: 400px;
+  flex-direction: column;
+  gap: .75rem;
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.todos::-webkit-scrollbar, .tasks::-webkit-scrollbar {
+  display: none;
+}
+
+.todo, .task {
+  flex-shrink: 0;
+  padding-inline: 1rem;
+  width: 350px;
+
+  border-radius: 100vh;
+  font-size: 1.5rem;
+  font-weight: 500;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  cursor: pointer;
+  transition: 250ms;
+}
+
+.todo:active {
+  scale: 1.05;
+}
+
+.todo.active {
+  background-color: var(--clr-primary);
+}
+
+.buttons-area {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 1rem;
+  gap: 10px;
+}
+
+.buttons-area button {
+  height: 35px;
+
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-radius: 100vh;
+
+  transition: 300ms;
+}
+
+button#deleteTask, button#deleteList  {
+  padding-inline: 1.5rem;
+  color: var(--clr-text);
+  background-color: var(--clr-accent);
+}
+
+button#add {
+  padding-inline: 1.5rem;
+  color: var(--clr-text);
+  background-color: var(--clr-primary);
+}
+
+.tasks-list {
+  box-shadow: 10px 10px var(--clr-accent);
+}
+
+.tasks-list .title {
+  font-size: 3rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+}
+
+.task {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: .25rem;
+}
+
+.task .task-checkbox {
+  accent-color: var(--clr-primary);
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.task.selected {
+  background-color: var(--clr-secondary);
+}
+
+.cover {
+  position: absolute;
+  inset: 0 0 0 0;
+  background-color: rgba(0,0,0,0.2);
+}
+
+.add-todo-button {
+  padding-inline: 0;
+}
+
+.add-todo-button svg {
+  fill: var(--clr-text);
+  transition: 300ms;
+}
+
+.add-todo-button:hover svg {
+  fill: var(--clr-accent);
+}
+
+header {
+  background-image: linear-gradient(to right, var(--clr-primary), var(--clr-accent));
+  padding: 1rem 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--clr-background);
+}
+
+button#logout {
+  background-color: transparent;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border: 3px solid var(--clr-background);
+  border-radius: 100vh;
+  color: var(--clr-background);
+  height: 2em;
+  width: 150px;
+}
+
+button#logout:hover {
+  box-shadow: 0 0 20px 0 var(--clr-background);
+}

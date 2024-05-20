@@ -1,0 +1,18 @@
+<div class="container grid-3-2-columns">
+  <div class="columns message">
+    <h1>Start organizing your plans now!</h1>
+    <button (click)="goToLogin()" type="button" id="login">Log in</button>
+  </div>
+  <div class="columns">
+    <div class="register-form">
+      <h2 class="title gradient-text">Sign in</h2>
+      <form class="information-form" action="">
+        <input type="text" placeholder="username" name="username" [(ngModel)] = "usernameValue">
+        <input type="password" placeholder="password" name="password" [(ngModel)] = "passwordValue">
+        <input type="password" placeholder="Confirm your password" name="confirmPassword" [(ngModel)] = "confirmpasswordValue">
+        <button type="button" (click)="checkRegister()" id="register">Sign in</button>
+      </form>
+    </div>
+  </div>
+</div>
+

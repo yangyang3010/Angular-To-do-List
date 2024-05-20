@@ -1,0 +1,70 @@
+.message {
+  background-image: linear-gradient(to bottom right, var(--clr-secondary),var(--clr-accent));
+  border-radius: 1rem 100vh 100vh 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.message h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--clr-background)
+}
+
+button {
+  height: 2em;
+}
+
+.columns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-form {
+  padding: 2rem 3rem;
+}
+
+.register-form .title {
+  font-weight: bold;
+  font-size: 4rem;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+button#register {
+  background-color: var(--clr-primary);
+  width: 100%;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border-radius: 100vh;
+}
+
+button#register:hover {
+  background-color: var(--clr-accent);
+  color: var(--clr-background);
+}
+
+button#login {
+  background-color: transparent;
+  width: 50%;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border: 3px solid var(--clr-background);
+  border-radius: 100vh;
+  color: var(--clr-background);
+}
+
+button#login:hover {
+  box-shadow: 0 0 20px 0 var(--clr-background);
+}
+
+input {
+  text-overflow: ellipsis;
+}
